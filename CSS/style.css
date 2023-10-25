@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap');
+
+@import url(left.css);
+@import url(media.css);
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --body-bg : hsl(234, 29%, 20%);
+    --main-bg : hsl(0, 0%, 100%);
+    --roboto-font: 'Roboto', sans-serif;
+    --text-color: hsl(235, 18%, 26%);
+    --tomato-color: hsl(4, 100%, 67%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    background-color: var(--main-bg);
+    padding: 1.5rem;
+    border-radius: 30px;
+    font-family: var(--roboto-font);
+}
+/* left Side styling start here  */
+
+.left {
+    padding: .5rem 0 1rem 2rem;
+    font-size: 15px;
+}
+.left h1 {
+    font-size: 3.4rem;
+    color: var(--body-bg);
+}
+.left p {
+    color: var(--text-color);
+}
+
+.left p.para {
+    width: 90%;
+    margin-top: -1.5rem;
+    line-height: 1.5;
+}
+
+.left .one, .two, .three {
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+    margin: .7rem 0;
+}
+.left .one, .two, .three span {
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.emails-inp {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    gap: 1rem;
+}
+
+/* Emails Information  */
+
+.email-para {
+    font-size: 13px;
+    margin-top: 2.2rem;
+    margin-bottom: .4rem;
+}
+
+input.email {
+    padding: .95rem 1.5rem;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid hsl(233, 9%, 81%);
+}
+input.email::placeholder {
+    color: hsl(231, 7%, 60%);
+}
+
+.btn {
+    font-family: var(--roboto-font);
+    font-weight: 400;
+    padding: .95rem 1.5rem;
+    background: var(--body-bg);
+    color: white;
+    border-radius: 6px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    /* transition: box-shadow,  100ms ease-in-out; */
+}
+.btn:hover {
+    background: linear-gradient(120deg, hsl(340, 100%, 61%), var(--tomato-color));
+    box-shadow: 0 5px 20px var(--tomato-color);
+}
+/* Media Queries  */
+
+@media screen and (max-width: 770px) {
+    .main {
+        flex-direction: column-reverse;
+        border-radius: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100vh;
+        position: relative;
+        justify-content: flex-end;
+        /* align-items: flex-start; */
+    }
+    .left h1 {
+        /* padding: 0; */
+        font-size: 2.5rem;
+    }
+    .left p.para {
+        width: 100%;
+    }
+    .emails-inp {
+        width: 100%;
+        padding-right: 2rem;
+    }
+    .btn {
+        font-weight: 400;
+        font-size: 13px;
+    }
+    .right img {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+
+    }
+}
+
+@media screen and (max-width: 310px) {
+    .left {
+        padding: 0 1rem;
+    }
+    .emails-inp {
+        padding: 0;
+    }
+}
