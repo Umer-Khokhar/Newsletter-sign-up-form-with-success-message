@@ -12,6 +12,7 @@
     --roboto-font: 'Roboto', sans-serif;
     --text-color: hsl(235, 18%, 26%);
     --tomato-color: hsl(4, 100%, 67%);
+    --tomato-color1: hsla(4, 100%, 67%, 0.643);
 }
 
 body {
@@ -21,16 +22,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     min-height: 100vh;
 }
 
 .main {
     display: flex;
+    /* display: none; */
     justify-content: center;
     background-color: var(--main-bg);
     padding: 1.5rem;
     border-radius: 30px;
     font-family: var(--roboto-font);
+}
+
+main.inactive {
+    display: none;
 }
 /* left Side styling start here  */
 
@@ -63,19 +70,25 @@ body {
     line-height: 1.5;
 }
 
+
+/* Emails Information  */
+
+.msg {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    font-size: 13px;
+    margin-top: 2.2rem;
+    margin-bottom: .5rem;
+    width: 85%;
+}
+
 .emails-inp {
     display: flex;
     flex-direction: column;
     width: 85%;
     gap: 1rem;
-}
-
-/* Emails Information  */
-
-.email-para {
-    font-size: 13px;
-    margin-top: 2.2rem;
-    margin-bottom: .4rem;
 }
 
 input.email {
@@ -124,6 +137,10 @@ input.email::placeholder {
     .left p.para {
         width: 100%;
     }
+    .msg {
+        width: 100%;
+        padding-right: 2rem;
+    }
     .emails-inp {
         width: 100%;
         padding-right: 2rem;
@@ -149,4 +166,34 @@ input.email::placeholder {
     .emails-inp {
         padding: 0;
     }
+}
+
+.success-sec {
+    display: none;
+    font-family: var(--roboto-font);
+    background-color: #fff;
+    width: 380px;
+    padding: 2rem 2.5rem;
+    border-radius: 30px;
+}
+
+.success-sec.active {
+    display: block;
+}
+
+.success-sec h1 {
+    font-size: 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+}
+
+.success-sec p {
+    font-size: 14px;
+    /* width: 95%; */
+}
+
+.success-sec .btn {
+    width: 100%;
+    padding: .8rem 1.5rem;
+
 }

@@ -11,6 +11,7 @@
     />
     <title>Newsletter sign-up form with success message</title>
     <link rel="stylesheet" href="CSS/style.css" />
+    <script src="app.js" defer></script>
   </head>
   <body>
     <!-- Sign-up form start -->
@@ -32,8 +33,11 @@
           <img src="./assets/images/icon-list.svg" alt="" />
           <span>And much more!</span>
         </div>
+        <div class="msg">
+          <span class="email-para"><b>Email address</b></span>
+          <span class="error-msg" id="error"></span>
 
-        <p class="email-para"><b>Email address</b></p>
+        </div>
         <div class="emails-inp">
           <input
             type="email"
@@ -41,16 +45,28 @@
             name="email"
             id="email"
             placeholder="email@company.com"
+            />
+            <button class="btn" id="btn">Subscribe to monthly newsletter</button>
+          </div>
+        </section>
+        <section class="right">
+          <picture>
+            <source
+            media="(max-width: 770px)"
+            srcset="./assets/images/illustration-sign-up-mobile.svg"
           />
-          <button class="btn">Subscribe to monthly newsletter</button>
-        </div>
-      </section>
-      <section class="right">
-        <picture>
-          <source media="(max-width: 770px)" srcset="./assets/images/illustration-sign-up-mobile.svg">
-          <img src="./assets/images/illustration-sign-up-desktop.svg" width="350">
+          <img
+            src="./assets/images/illustration-sign-up-desktop.svg"
+            width="350"
+          />
         </picture>
       </section>
     </main>
+    <section class="success-sec" id="success">
+      <img src="./assets/images/icon-list.svg" alt="" / width="45">
+      <h1>Thanks for subscribing!</h1>
+      <p>A confirmation email has been sent to <span id="mail"><b>umerkhokhar1001@gmail.com</b></span> Please open it and click the button inside to confirm your subscription</p>
+      <button class="btn" id="dismiss-btn">Dismiss Message</button>
+    </section>
   </body>
 </html>
